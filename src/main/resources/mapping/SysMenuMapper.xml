@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lq.maintenance.core.dao.SysMenuMapper">
+  <resultMap id="BaseResultMap" type="com.lq.maintenance.core.model.SysMenu">
+    <id column="menu_id" jdbcType="INTEGER" property="menuId" />
+    <result column="parent_menu_id" jdbcType="INTEGER" property="parentMenuId" />
+    <result column="menu_name" jdbcType="VARCHAR" property="menuName" />
+    <result column="menu_url" jdbcType="VARCHAR" property="menuUrl" />
+    <result column="menu_description" jdbcType="VARCHAR" property="menuDescription" />
+    <result column="menu_icon" jdbcType="VARCHAR" property="menuIcon" />
+  </resultMap>
+</mapper>

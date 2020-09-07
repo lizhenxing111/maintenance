@@ -1,0 +1,47 @@
+#端口
+server:
+  port: 8056
+  servlet:
+    context-path: /
+spring:
+  #数据源
+  application:
+    name: maintenance
+  datasource:
+    name: druidDataSource
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/maintenance?useUnicode=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true&failOverReadOnly=false&serverTimezone=GMT
+      username: root
+      password: 123456
+      filters: stat,wall,log4j2,config
+      max-active: 100
+      initial-size: 1
+      max-wait: 60000
+      min-idle: 1
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: select 'x'
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      max-open-prepared-statements: 50
+      max-pool-prepared-statement-per-connection-size: 20
+  #redis
+#  redis:
+#    database: 0
+#    host: localhost
+#    port: 6379
+#    password: 123456
+#    jedis:
+#      pool:
+#        max-active: 10
+mybatis:
+  mapper-locations: /mapping/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+#日志
+logging:
+  config: classpath:log4j2.yml
