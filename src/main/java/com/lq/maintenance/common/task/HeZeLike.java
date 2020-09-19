@@ -1,7 +1,9 @@
 package com.lq.maintenance.common.task;
 
 import com.alibaba.fastjson.JSONObject;
+import com.lq.maintenance.core.dao.HzLogMapper;
 import com.lq.maintenance.core.dao.HzNoticeMapper;
+import com.lq.maintenance.core.model.HzLog;
 import com.lq.maintenance.core.model.HzNotice;
 import org.apache.http.Consts;
 import org.apache.http.HttpEntity;
@@ -30,63 +32,46 @@ import java.util.UUID;
 public class HeZeLike {
     @Autowired
     private HzNoticeMapper hzNoticeMapper;
+    @Autowired
+    private HzLogMapper hzLogMapper;
 
-    //    type: Y
-//    contentID: 604089
-//    clientID: c08e1c7c
-//    http://yurenhao.sizhengwang.cn/zcms/front/univs/like
-//    @Scheduled(
-//            cron = "0/5 * * * * *"
-//    )
-//    @Scheduled(fixedDelay = 1000)
     public void crawData() {
         System.out.println("-----------------------------------");
         CloseableHttpClient httpclient = HttpClients.createDefault();
-        List<HzNotice> hzNotices = hzNoticeMapper.selectAll();
         HttpPost httpPost = new HttpPost("http://yurenhao.sizhengwang.cn/zcms/front/univs/like");
-        for (HzNotice hzNotice : hzNotices) {
-            System.out.println("++++");
-            for (int i = 0; i < (int)Math.ceil(Math.random() * 100) * 8; i++) {
-                try {
-                    List<NameValuePair> nvps = new ArrayList<NameValuePair>();
-                    nvps.add(new BasicNameValuePair("type", "Y"));
-                    nvps.add(new BasicNameValuePair("contentID", hzNotice.getNoticeId().toString()));
-                    nvps.add(new BasicNameValuePair("clientID", generateShortUuid()));
-                    HttpEntity httpEntity =new UrlEncodedFormEntity(nvps, Consts.UTF_8);;
-                    httpPost.setEntity(httpEntity);
-                    CloseableHttpResponse response = httpclient.execute(httpPost);
-                    HttpEntity entity = response.getEntity();
-                    if (entity != null) {
-                        String data = EntityUtils.toString(entity);
-                        JSONObject jsonData = JSONObject.parseObject(data);
-                        System.out.println(jsonData);
-                        String status = jsonData.get("status").toString();
-                        if (!status.equals("1")){
-                            System.out.println(hzNotice.getNoticeId()+":失败!");
-                        }else {
-                            System.out.println("成功");
-                        }
-                    }
-                    response.close();
-                } catch (ClientProtocolException var39) {
-                    var39.printStackTrace();
-                } catch (org.apache.http.ParseException var40) {
-                    var40.printStackTrace();
-                } catch (IOException var41) {
-                    var41.printStackTrace();
-                } finally {
-
-
+        List<HzLog> hzLogs = hzLogMapper.selectAll();
+        for (HzLog hzLog : hzLogs) {
+            try {
+                List<NameValuePair> nvps = new ArrayList<NameValuePair>();
+                nvps.add(new BasicNameValuePair("type", "N"));
+                nvps.add(new BasicNameValuePair("contentID", hzLog.getHzClientId().toString()));
+                nvps.add(new BasicNameValuePair("clientID", hzLog.getClientId()));
+                HttpEntity httpEntity = new UrlEncodedFormEntity(nvps, Consts.UTF_8);
+                httpPost.setEntity(httpEntity);
+                CloseableHttpResponse response = httpclient.execute(httpPost);
+                HttpEntity entity = response.getEntity();
+                if (entity != null) {
+                    String data = EntityUtils.toString(entity);
+                    JSONObject jsonData = JSONObject.parseObject(data);
+                    System.out.println(jsonData);
                 }
-            }
+                response.close();
+            } catch (ClientProtocolException var39) {
+                var39.printStackTrace();
+            } catch (org.apache.http.ParseException var40) {
+                var40.printStackTrace();
+            } catch (IOException var41) {
+                var41.printStackTrace();
+            } finally {
 
+            }
         }
         try {
             httpclient.close();
         } catch (IOException var37) {
             var37.printStackTrace();
         }
-
+        System.out.println("结束------------------------------------------------");
     }
 
     public static String[] chars = new String[]{"a", "b", "c", "d", "e", "f",
@@ -95,7 +80,6 @@ public class HeZeLike {
             "6", "7", "8", "9", "A", "B", "C", "D", "E", "F", "G", "H", "I",
             "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V",
             "W", "X", "Y", "Z"};
-
 
     public static String generateShortUuid() {
         StringBuffer shortBuffer = new StringBuffer();

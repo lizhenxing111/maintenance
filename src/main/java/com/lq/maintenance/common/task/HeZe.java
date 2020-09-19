@@ -26,17 +26,13 @@ public class HeZe {
     @Autowired
     private HzNoticeMapper hzNoticeMapper;
 
-    public HeZe() {
-    }
-
-
-    /*别人 14022*/
     /*菏泽 14972*/
-    @Scheduled(cron = "0/5 * * * * *")
+    /*武汉东湖学院文法学 15190*/
+//    @Scheduled(cron = "0/5 * * * * *")
     public void crawData() {
         CloseableHttpClient httpclient = HttpClients.createDefault();
         try {
-            HttpGet httpget = new HttpGet("http://yurenhao.sizhengwang.cn/zcms/front/information/studio?pageIndex=0&pageSize=10000&tag=&siteID=143&studioID=14972&v=" + (new Date()).getTime());
+            HttpGet httpget = new HttpGet("http://yurenhao.sizhengwang.cn/zcms/front/information/studio?pageIndex=0&pageSize=10000&tag=&siteID=143&studioID=15190&v=" + (new Date()).getTime());
             CloseableHttpResponse response = httpclient.execute(httpget);
             HttpEntity entity = response.getEntity();
             if (entity != null) {

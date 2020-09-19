@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lq.maintenance.core.dao.HzLogMapper">
+  <resultMap id="BaseResultMap" type="com.lq.maintenance.core.model.HzLog">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="hz_client_id" jdbcType="INTEGER" property="hzClientId" />
+    <result column="client_id" jdbcType="VARCHAR" property="clientId" />
+    <result column="generate_date" jdbcType="TIMESTAMP" property="generateDate" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, hz_client_id, client_id, generate_date
+  </sql>
+</mapper>
