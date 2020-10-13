@@ -1,7 +1,6 @@
-package com.lq.maintenance.hz.controller.service.imp;
+package com.lq.maintenance.hz.service.impl;
 
 import com.alibaba.fastjson.JSONObject;
-import com.lq.maintenance.common.util.NumberUtils;
 import com.lq.maintenance.core.dao.HzLogMapper;
 import com.lq.maintenance.core.model.HzLog;
 import org.apache.http.Consts;
@@ -21,7 +20,6 @@ import tk.mybatis.mapper.entity.Example;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Service
