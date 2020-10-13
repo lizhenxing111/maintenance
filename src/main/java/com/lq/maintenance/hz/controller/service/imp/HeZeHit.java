@@ -1,4 +1,4 @@
-package com.lq.maintenance.common.task;
+package com.lq.maintenance.hz.controller.service.imp;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
@@ -33,20 +33,22 @@ public class HeZeHit {
         try {
             for (int i = 0; i < 30; i++) {
                 String UniqueID = UUID.randomUUID().toString().replaceAll("-", "");
-                HttpGet httpget = new HttpGet("http://yurenhao.sizhengwang.cn/zcms/front/stat/dealer?SiteID=143&CatalogInnerCode=" + getRandomNum(24));
+                HttpGet httpget = new HttpGet("http://yurenhao.sizhengwang.cn/zcms/front/stat/dealer?SiteID=143&CatalogInnerCode=002738000002000003000001" );
                 httpget.setHeader("UniqueID",UniqueID);
                 httpget.setHeader("LeafID","606276");
                 httpget.setHeader("Type","Article");
                 httpget.setHeader("vq","2");
                 CloseableHttpResponse response = httpclient.execute(httpget);
+                Header[] allHeaders1 = response.getAllHeaders();
+                for (Header header : allHeaders1) {
+                    System.out.println(header.getName());
+                }
                 Header[] allHeaders = response.getHeaders("Set-Cookie");
                 String s = allHeaders[0].getValue().split(";")[0];
-                System.out.println(s);
                 String[] split = s.split("\\|");
-                Long end = Long.valueOf(split[1]) + 44L;
+                Long end = Long.valueOf(split[1]) + 60L;
                 String cookie = split[0] + "|" + end.toString() + "|" + split[2];
-                System.out.println(cookie);
-                HttpGet httpget1 = new HttpGet("http://yurenhao.sizhengwang.cn/zcms/front/stat/dealer?SiteID=143&CatalogInnerCode=" + getRandomNum(24));
+                HttpGet httpget1 = new HttpGet("http://yurenhao.sizhengwang.cn/zcms/front/recommends/dealer?SiteID=143&CatalogInnerCode=002738000002000003000001" );
                 httpget1.setHeader(allHeaders[0].getName(), cookie);
                 httpget1.setHeader("Referer", "http://yurenhao.sizhengwang.cn/a/hzxysxytjxyxsdzb/200908/606276.shtml");
                 httpget1.setHeader("Sites", "_143");

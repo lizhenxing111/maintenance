@@ -148,11 +148,12 @@
 					<encoding>utf-8</encoding>
 				</configuration>
 			</plugin>
+
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<mainClass>com.zbsy.sysmain.MaintenanceApplication</mainClass>
+					<mainClass>com.lq.maintenance.MaintenanceApplication</mainClass>
 				</configuration>
 				<executions>
 					<execution>

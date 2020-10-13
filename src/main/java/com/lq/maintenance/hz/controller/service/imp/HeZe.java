@@ -1,4 +1,4 @@
-package com.lq.maintenance.common.task;
+package com.lq.maintenance.hz.controller.service.imp;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
@@ -28,11 +28,10 @@ public class HeZe {
 
     /*菏泽 14972*/
     /*武汉东湖学院文法学 15190*/
-//    @Scheduled(cron = "0/5 * * * * *")
     public void crawData() {
         CloseableHttpClient httpclient = HttpClients.createDefault();
         try {
-            HttpGet httpget = new HttpGet("http://yurenhao.sizhengwang.cn/zcms/front/information/studio?pageIndex=0&pageSize=10000&tag=&siteID=143&studioID=15190&v=" + (new Date()).getTime());
+            HttpGet httpget = new HttpGet("http://yurenhao.sizhengwang.cn/zcms/front/information/studio?pageIndex=0&pageSize=10000&tag=&siteID=143&studioID=14972&v=" + (new Date()).getTime());
             CloseableHttpResponse response = httpclient.execute(httpget);
             HttpEntity entity = response.getEntity();
             if (entity != null) {
@@ -61,7 +60,7 @@ public class HeZe {
                         Date date = simpleDateFormat.parse(publishDate);
                         HzNotice hzNotice = new HzNotice();
                         hzNotice.setNoticeId(noticeId);
-                        HzNotice selectOne = (HzNotice)this.hzNoticeMapper.selectOne(hzNotice);
+                        HzNotice selectOne = this.hzNoticeMapper.selectOne(hzNotice);
                         if (selectOne != null) {
                             selectOne.setHitCount(hitCount);
                             selectOne.setLikeCount(likeCount);

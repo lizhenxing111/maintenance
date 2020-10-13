@@ -1,6 +1,6 @@
 #端口
 server:
-  port: 8056
+  port: 8001
   servlet:
     context-path: /
 spring:
@@ -14,7 +14,7 @@ spring:
       driver-class-name: com.mysql.cj.jdbc.Driver
       url: jdbc:mysql://localhost:3306/maintenance?useUnicode=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true&failOverReadOnly=false&serverTimezone=GMT
       username: root
-      password: 123456
+      password: 123
       filters: stat,wall,log4j2,config
       max-active: 100
       initial-size: 1

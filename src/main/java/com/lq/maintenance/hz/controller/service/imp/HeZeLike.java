@@ -1,25 +1,21 @@
-package com.lq.maintenance.common.task;
+package com.lq.maintenance.hz.controller.service.imp;
 
 import com.alibaba.fastjson.JSONObject;
+import com.lq.maintenance.common.util.NumberUtils;
 import com.lq.maintenance.core.dao.HzLogMapper;
-import com.lq.maintenance.core.dao.HzNoticeMapper;
 import com.lq.maintenance.core.model.HzLog;
-import com.lq.maintenance.core.model.HzNotice;
 import org.apache.http.Consts;
 import org.apache.http.HttpEntity;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
@@ -31,21 +27,20 @@ import java.util.UUID;
 @Service
 public class HeZeLike {
     @Autowired
-    private HzNoticeMapper hzNoticeMapper;
-    @Autowired
     private HzLogMapper hzLogMapper;
 
-    public void crawData() {
-        System.out.println("-----------------------------------");
+    public void crawData(Integer contentId) {
         CloseableHttpClient httpclient = HttpClients.createDefault();
         HttpPost httpPost = new HttpPost("http://yurenhao.sizhengwang.cn/zcms/front/univs/like");
-        List<HzLog> hzLogs = hzLogMapper.selectAll();
-        for (HzLog hzLog : hzLogs) {
+        int random = NumberUtils.getRandom(20, 25);
+        System.out.println(random);
+        for (int i = 0; i < random; i++) {
             try {
+                String shortUuid = generateShortUuid();
                 List<NameValuePair> nvps = new ArrayList<NameValuePair>();
-                nvps.add(new BasicNameValuePair("type", "N"));
-                nvps.add(new BasicNameValuePair("contentID", hzLog.getHzClientId().toString()));
-                nvps.add(new BasicNameValuePair("clientID", hzLog.getClientId()));
+                nvps.add(new BasicNameValuePair("type", "Y"));
+                nvps.add(new BasicNameValuePair("contentID", contentId.toString()));
+                nvps.add(new BasicNameValuePair("clientID", shortUuid));
                 HttpEntity httpEntity = new UrlEncodedFormEntity(nvps, Consts.UTF_8);
                 httpPost.setEntity(httpEntity);
                 CloseableHttpResponse response = httpclient.execute(httpPost);
@@ -54,6 +49,11 @@ public class HeZeLike {
                     String data = EntityUtils.toString(entity);
                     JSONObject jsonData = JSONObject.parseObject(data);
                     System.out.println(jsonData);
+                    HzLog hzLog = new HzLog();
+                    hzLog.setClientId(shortUuid);
+                    hzLog.setGenerateDate(new Date());
+                    hzLog.setHzClientId(contentId);
+                    hzLogMapper.insertSelective(hzLog);
                 }
                 response.close();
             } catch (ClientProtocolException var39) {
@@ -62,8 +62,6 @@ public class HeZeLike {
                 var40.printStackTrace();
             } catch (IOException var41) {
                 var41.printStackTrace();
-            } finally {
-
             }
         }
         try {
@@ -71,7 +69,6 @@ public class HeZeLike {
         } catch (IOException var37) {
             var37.printStackTrace();
         }
-        System.out.println("结束------------------------------------------------");
     }
 
     public static String[] chars = new String[]{"a", "b", "c", "d", "e", "f",
