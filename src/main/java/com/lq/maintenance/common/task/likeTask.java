@@ -5,6 +5,7 @@ import com.lq.maintenance.core.dao.HzNoticeMapper;
 import com.lq.maintenance.core.model.HzNotice;
 import com.lq.maintenance.hz.service.RemoteDataService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -22,7 +23,7 @@ public class likeTask {
     private RemoteDataService remoteDataService;
     @Autowired
     private HzNoticeMapper hzNoticeMapper;
-//    @Scheduled(cron = "0 0 22 * * ?")
+    @Scheduled(cron = "0 15 20 * * ?")
     public void likeTaskMain(){
         remoteDataService.crawRemoteData();
         List<HzNotice> hzNotices = hzNoticeMapper.selectAll();

@@ -1,254 +1,210 @@
-2020-10-13 21:59:36.586 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting MaintenanceApplication on DESKTOP-DENKFV6 with PID 12408 (L:\data\idea-work\maintenance\target\classes started by lq in L:\data\idea-work\maintenance)
-2020-10-13 21:59:36.601 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
-2020-10-13 21:59:36.648 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-10-13 21:59:36.648 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-10-13 21:59:37.257 - WARN  [  restartedMain] o.m.l.Logger                   : No MyBatis mapper was found in '[com.lq.maintenance]' package. Please check your configuration.
-2020-10-13 21:59:37.289 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-10-13 21:59:37.289 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-10-13 21:59:37.320 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 repository interfaces.
-2020-10-13 21:59:37.570 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b81b9d59] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-10-13 21:59:37.882 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8001 (http)
-2020-10-13 21:59:37.898 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8001"]
-2020-10-13 21:59:37.898 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
-2020-10-13 21:59:37.898 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.26]
-2020-10-13 21:59:37.992 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
-2020-10-13 21:59:37.992 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1344 ms
-2020-10-13 21:59:38.117 - INFO  [  restartedMain] a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2020-10-13 21:59:38.351 - INFO  [  restartedMain] c.a.d.p.DruidDataSource        : {dataSource-1} inited
-2020-10-13 21:59:38.804 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
-2020-10-13 21:59:38.882 - WARN  [  restartedMain] tTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2020-10-13 21:59:38.914 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
-2020-10-13 21:59:38.914 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
-2020-10-13 21:59:38.914 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
-2020-10-13 21:59:38.914 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear EntityHelper entityTableMap cache.
-2020-10-13 21:59:39.195 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'taskScheduler'
-2020-10-13 21:59:39.226 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
-2020-10-13 21:59:39.257 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8001"]
-2020-10-13 21:59:39.289 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 8001 (http) with context path ''
-2020-10-13 21:59:39.289 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started MaintenanceApplication in 3.002 seconds (JVM running for 4.763)
-2020-10-13 22:07:36.738 - INFO  [nio-8001-exec-2] o.a.j.l.DirectJDKLog           : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-10-13 22:07:36.738 - INFO  [nio-8001-exec-2] o.s.w.s.FrameworkServlet       : Initializing Servlet 'dispatcherServlet'
-2020-10-13 22:07:36.745 - INFO  [nio-8001-exec-2] o.s.w.s.FrameworkServlet       : Completed initialization in 5 ms
-2020-10-13 22:08:29.277 - INFO  [      Thread-12] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'taskScheduler'
-2020-10-13 22:08:29.292 - INFO  [      Thread-12] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-10-13 22:08:29.295 - INFO  [      Thread-12] c.a.d.p.DruidDataSource        : {dataSource-1} closed
-2020-10-13 22:10:16.265 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting MaintenanceApplication on DESKTOP-DENKFV6 with PID 2688 (L:\data\idea-work\maintenance\target\classes started by lq in L:\data\idea-work\maintenance)
-2020-10-13 22:10:16.271 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
-2020-10-13 22:10:16.304 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-10-13 22:10:16.304 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-10-13 22:10:16.853 - WARN  [  restartedMain] o.m.l.Logger                   : No MyBatis mapper was found in '[com.lq.maintenance]' package. Please check your configuration.
-2020-10-13 22:10:16.884 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-10-13 22:10:16.887 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-10-13 22:10:16.915 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 0 repository interfaces.
-2020-10-13 22:10:17.178 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7d560d8b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-10-13 22:10:17.488 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8001 (http)
-2020-10-13 22:10:17.499 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8001"]
-2020-10-13 22:10:17.506 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
-2020-10-13 22:10:17.507 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.26]
-2020-10-13 22:10:17.602 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
-2020-10-13 22:10:17.602 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1298 ms
-2020-10-13 22:10:17.721 - INFO  [  restartedMain] a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2020-10-13 22:10:17.943 - INFO  [  restartedMain] c.a.d.p.DruidDataSource        : {dataSource-1} inited
-2020-10-13 22:10:18.352 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
-2020-10-13 22:10:18.436 - WARN  [  restartedMain] tTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2020-10-13 22:10:18.466 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
-2020-10-13 22:10:18.466 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
-2020-10-13 22:10:18.467 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
-2020-10-13 22:10:18.467 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear EntityHelper entityTableMap cache.
-2020-10-13 22:10:18.762 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'taskScheduler'
-2020-10-13 22:10:18.797 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
-2020-10-13 22:10:18.830 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8001"]
-2020-10-13 22:10:18.851 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 8001 (http) with context path ''
-2020-10-13 22:10:18.854 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started MaintenanceApplication in 2.865 seconds (JVM running for 4.277)
-2020-10-13 22:10:25.750 - INFO  [nio-8001-exec-1] o.a.j.l.DirectJDKLog           : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-10-13 22:10:25.750 - INFO  [nio-8001-exec-1] o.s.w.s.FrameworkServlet       : Initializing Servlet 'dispatcherServlet'
-2020-10-13 22:10:25.757 - INFO  [nio-8001-exec-1] o.s.w.s.FrameworkServlet       : Completed initialization in 7 ms
-2020-10-13 22:32:46.531 - INFO  [      Thread-15] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'taskScheduler'
-2020-10-13 22:32:46.559 - INFO  [      Thread-15] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-10-13 22:32:46.561 - INFO  [      Thread-15] c.a.d.p.DruidDataSource        : {dataSource-1} closed
-2020-10-13 22:47:57.149 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting MaintenanceApplication on DESKTOP-DENKFV6 with PID 12988 (L:\data\idea-work\maintenance\target\classes started by lq in L:\data\idea-work\maintenance)
-2020-10-13 22:47:57.155 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
-2020-10-13 22:47:57.189 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-10-13 22:47:57.189 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-10-13 22:47:57.700 - WARN  [  restartedMain] o.m.l.Logger                   : No MyBatis mapper was found in '[com.lq.maintenance]' package. Please check your configuration.
-2020-10-13 22:47:57.729 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-10-13 22:47:57.732 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-10-13 22:47:57.758 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 repository interfaces.
-2020-10-13 22:47:58.024 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$471ae26e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-10-13 22:47:58.335 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8001 (http)
-2020-10-13 22:47:58.346 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8001"]
-2020-10-13 22:47:58.353 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
-2020-10-13 22:47:58.353 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.26]
-2020-10-13 22:47:58.449 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
-2020-10-13 22:47:58.450 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1261 ms
-2020-10-13 22:47:58.573 - INFO  [  restartedMain] a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2020-10-13 22:47:58.796 - INFO  [  restartedMain] c.a.d.p.DruidDataSource        : {dataSource-1} inited
-2020-10-13 22:47:59.006 - WARN  [  restartedMain] c.s.AbstractApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'noticeController': Unsatisfied dependency expressed through field 'noticeService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.lq.maintenance.hz.service.NoticeService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-2020-10-13 22:47:59.010 - INFO  [  restartedMain] c.a.d.p.DruidDataSource        : {dataSource-1} closed
-2020-10-13 22:47:59.012 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Stopping service [Tomcat]
-2020-10-13 22:47:59.021 - INFO  [  restartedMain] valuationReportLoggingListener : 
+2020-10-15 20:14:44.082 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting MaintenanceApplication on DESKTOP-DENKFV6 with PID 17356 (L:\data\idea-work\maintenance\target\classes started by lq in L:\data\idea-work\maintenance)
+2020-10-15 20:14:44.097 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2020-10-15 20:14:44.150 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-10-15 20:14:44.150 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-10-15 20:14:45.018 - WARN  [  restartedMain] o.m.l.Logger                   : No MyBatis mapper was found in '[com.lq.maintenance]' package. Please check your configuration.
+2020-10-15 20:14:45.067 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-15 20:14:45.071 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-10-15 20:14:45.104 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 20ms. Found 0 repository interfaces.
+2020-10-15 20:14:45.452 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7c37cac8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-15 20:14:45.804 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8001 (http)
+2020-10-15 20:14:45.903 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8001"]
+2020-10-15 20:14:45.912 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2020-10-15 20:14:45.912 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.26]
+2020-10-15 20:14:46.022 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2020-10-15 20:14:46.022 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1872 ms
+2020-10-15 20:14:46.179 - INFO  [  restartedMain] a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-10-15 20:14:46.464 - INFO  [  restartedMain] c.a.d.p.DruidDataSource        : {dataSource-1} inited
+2020-10-15 20:14:46.972 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-15 20:14:47.080 - WARN  [  restartedMain] tTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-10-15 20:14:47.117 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-10-15 20:14:47.118 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-10-15 20:14:47.119 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-10-15 20:14:47.119 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear EntityHelper entityTableMap cache.
+2020-10-15 20:14:47.595 - INFO  [  restartedMain] etailsServiceAutoConfiguration : 
 
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2020-10-13 22:48:27.716 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting MaintenanceApplication on DESKTOP-DENKFV6 with PID 14872 (L:\data\idea-work\maintenance\target\classes started by lq in L:\data\idea-work\maintenance)
-2020-10-13 22:48:27.722 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
-2020-10-13 22:48:27.837 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-10-13 22:48:27.837 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-10-13 22:48:28.483 - WARN  [  restartedMain] o.m.l.Logger                   : No MyBatis mapper was found in '[com.lq.maintenance]' package. Please check your configuration.
-2020-10-13 22:48:28.515 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-10-13 22:48:28.518 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-10-13 22:48:28.545 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 repository interfaces.
-2020-10-13 22:48:28.830 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$acb46f47] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-10-13 22:48:29.151 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8001 (http)
-2020-10-13 22:48:29.163 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8001"]
-2020-10-13 22:48:29.170 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
-2020-10-13 22:48:29.171 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.26]
-2020-10-13 22:48:29.266 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
-2020-10-13 22:48:29.266 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1429 ms
-2020-10-13 22:48:29.394 - INFO  [  restartedMain] a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2020-10-13 22:48:29.645 - INFO  [  restartedMain] c.a.d.p.DruidDataSource        : {dataSource-1} inited
-2020-10-13 22:48:30.086 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
-2020-10-13 22:48:30.169 - WARN  [  restartedMain] tTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2020-10-13 22:48:30.198 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
-2020-10-13 22:48:30.199 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
-2020-10-13 22:48:30.199 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
-2020-10-13 22:48:30.199 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear EntityHelper entityTableMap cache.
-2020-10-13 22:48:30.489 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'taskScheduler'
-2020-10-13 22:48:30.528 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
-2020-10-13 22:48:30.560 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8001"]
-2020-10-13 22:48:30.597 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 8001 (http) with context path ''
-2020-10-13 22:48:30.600 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started MaintenanceApplication in 3.278 seconds (JVM running for 4.87)
-2020-10-13 22:48:48.530 - INFO  [nio-8001-exec-2] o.a.j.l.DirectJDKLog           : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-10-13 22:48:48.530 - INFO  [nio-8001-exec-2] o.s.w.s.FrameworkServlet       : Initializing Servlet 'dispatcherServlet'
-2020-10-13 22:48:48.537 - INFO  [nio-8001-exec-2] o.s.w.s.FrameworkServlet       : Completed initialization in 6 ms
-2020-10-13 22:49:59.644 - INFO  [      Thread-13] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'taskScheduler'
-2020-10-13 22:49:59.657 - INFO  [      Thread-13] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-10-13 22:49:59.660 - INFO  [      Thread-13] c.a.d.p.DruidDataSource        : {dataSource-1} closed
-2020-10-13 22:50:03.984 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting MaintenanceApplication on DESKTOP-DENKFV6 with PID 14640 (L:\data\idea-work\maintenance\target\classes started by lq in L:\data\idea-work\maintenance)
-2020-10-13 22:50:03.992 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
-2020-10-13 22:50:04.057 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-10-13 22:50:04.057 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-10-13 22:50:04.665 - WARN  [  restartedMain] o.m.l.Logger                   : No MyBatis mapper was found in '[com.lq.maintenance]' package. Please check your configuration.
-2020-10-13 22:50:04.697 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-10-13 22:50:04.700 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-10-13 22:50:04.727 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 repository interfaces.
-2020-10-13 22:50:05.002 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$94ffda12] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-10-13 22:50:05.314 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8001 (http)
-2020-10-13 22:50:05.326 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8001"]
-2020-10-13 22:50:05.332 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
-2020-10-13 22:50:05.333 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.26]
-2020-10-13 22:50:05.430 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
-2020-10-13 22:50:05.430 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1373 ms
-2020-10-13 22:50:05.554 - INFO  [  restartedMain] a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2020-10-13 22:50:05.788 - INFO  [  restartedMain] c.a.d.p.DruidDataSource        : {dataSource-1} inited
-2020-10-13 22:50:06.215 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
-2020-10-13 22:50:06.297 - WARN  [  restartedMain] tTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2020-10-13 22:50:06.326 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
-2020-10-13 22:50:06.327 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
-2020-10-13 22:50:06.328 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
-2020-10-13 22:50:06.328 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear EntityHelper entityTableMap cache.
-2020-10-13 22:50:06.623 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'taskScheduler'
-2020-10-13 22:50:06.661 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
-2020-10-13 22:50:06.694 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8001"]
-2020-10-13 22:50:06.731 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 8001 (http) with context path ''
-2020-10-13 22:50:06.734 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started MaintenanceApplication in 3.131 seconds (JVM running for 4.64)
-2020-10-13 22:50:16.141 - INFO  [nio-8001-exec-4] o.a.j.l.DirectJDKLog           : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-10-13 22:50:16.142 - INFO  [nio-8001-exec-4] o.s.w.s.FrameworkServlet       : Initializing Servlet 'dispatcherServlet'
-2020-10-13 22:50:16.151 - INFO  [nio-8001-exec-4] o.s.w.s.FrameworkServlet       : Completed initialization in 9 ms
-2020-10-13 22:53:13.217 - INFO  [      Thread-12] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'taskScheduler'
-2020-10-13 22:53:13.232 - INFO  [      Thread-12] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-10-13 22:53:13.234 - INFO  [      Thread-12] c.a.d.p.DruidDataSource        : {dataSource-1} closed
-2020-10-13 22:53:13.734 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting MaintenanceApplication on DESKTOP-DENKFV6 with PID 14640 (L:\data\idea-work\maintenance\target\classes started by lq in L:\data\idea-work\maintenance)
-2020-10-13 22:53:13.735 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
-2020-10-13 22:53:13.951 - WARN  [  restartedMain] o.m.l.Logger                   : No MyBatis mapper was found in '[com.lq.maintenance]' package. Please check your configuration.
-2020-10-13 22:53:13.958 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-10-13 22:53:13.959 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-10-13 22:53:13.969 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 repository interfaces.
-2020-10-13 22:53:14.011 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$94ffda12] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-10-13 22:53:14.100 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8001 (http)
-2020-10-13 22:53:14.100 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8001"]
-2020-10-13 22:53:14.101 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
-2020-10-13 22:53:14.101 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.26]
-2020-10-13 22:53:14.118 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
-2020-10-13 22:53:14.118 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 380 ms
-2020-10-13 22:53:14.146 - INFO  [  restartedMain] a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2020-10-13 22:53:14.191 - INFO  [  restartedMain] c.a.d.p.DruidDataSource        : {dataSource-2} inited
-2020-10-13 22:53:14.331 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
-2020-10-13 22:53:14.361 - WARN  [  restartedMain] tTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2020-10-13 22:53:14.367 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
-2020-10-13 22:53:14.367 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
-2020-10-13 22:53:14.367 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
-2020-10-13 22:53:14.367 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear EntityHelper entityTableMap cache.
-2020-10-13 22:53:14.425 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'taskScheduler'
-2020-10-13 22:53:14.439 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
-2020-10-13 22:53:14.469 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8001"]
-2020-10-13 22:53:14.487 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 8001 (http) with context path ''
-2020-10-13 22:53:14.488 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started MaintenanceApplication in 0.802 seconds (JVM running for 192.394)
-2020-10-13 22:53:14.490 - INFO  [  restartedMain] EvaluationDeltaLoggingListener : Condition evaluation unchanged
-2020-10-13 22:53:15.872 - INFO  [nio-8001-exec-1] o.a.j.l.DirectJDKLog           : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-10-13 22:53:15.872 - INFO  [nio-8001-exec-1] o.s.w.s.FrameworkServlet       : Initializing Servlet 'dispatcherServlet'
-2020-10-13 22:53:15.882 - INFO  [nio-8001-exec-1] o.s.w.s.FrameworkServlet       : Completed initialization in 10 ms
-2020-10-13 22:53:19.425 - INFO  [      Thread-25] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'taskScheduler'
-2020-10-13 22:53:19.428 - INFO  [      Thread-25] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-10-13 22:53:19.430 - INFO  [      Thread-25] c.a.d.p.DruidDataSource        : {dataSource-2} closed
-2020-10-13 22:53:22.869 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting MaintenanceApplication on DESKTOP-DENKFV6 with PID 13892 (L:\data\idea-work\maintenance\target\classes started by lq in L:\data\idea-work\maintenance)
-2020-10-13 22:53:22.876 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
-2020-10-13 22:53:22.912 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-10-13 22:53:22.912 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-10-13 22:53:23.424 - WARN  [  restartedMain] o.m.l.Logger                   : No MyBatis mapper was found in '[com.lq.maintenance]' package. Please check your configuration.
-2020-10-13 22:53:23.452 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-10-13 22:53:23.455 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-10-13 22:53:23.480 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 repository interfaces.
-2020-10-13 22:53:23.745 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2423b06d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-10-13 22:53:24.039 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8001 (http)
-2020-10-13 22:53:24.050 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8001"]
-2020-10-13 22:53:24.056 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
-2020-10-13 22:53:24.057 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.26]
-2020-10-13 22:53:24.159 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
-2020-10-13 22:53:24.160 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1248 ms
-2020-10-13 22:53:24.284 - INFO  [  restartedMain] a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2020-10-13 22:53:24.510 - INFO  [  restartedMain] c.a.d.p.DruidDataSource        : {dataSource-1} inited
-2020-10-13 22:53:24.934 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
-2020-10-13 22:53:25.017 - WARN  [  restartedMain] tTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2020-10-13 22:53:25.046 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
-2020-10-13 22:53:25.046 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
-2020-10-13 22:53:25.047 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
-2020-10-13 22:53:25.047 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear EntityHelper entityTableMap cache.
-2020-10-13 22:53:25.376 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'taskScheduler'
-2020-10-13 22:53:25.426 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
-2020-10-13 22:53:25.465 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8001"]
-2020-10-13 22:53:25.492 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 8001 (http) with context path ''
-2020-10-13 22:53:25.495 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started MaintenanceApplication in 2.917 seconds (JVM running for 4.303)
-2020-10-13 22:53:27.584 - INFO  [      Thread-15] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'taskScheduler'
-2020-10-13 22:53:27.602 - INFO  [      Thread-15] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'applicationTaskExecutor'
-2020-10-13 22:53:27.618 - INFO  [      Thread-15] c.a.d.p.DruidDataSource        : {dataSource-1} closed
-2020-10-13 22:53:31.691 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting MaintenanceApplication on DESKTOP-DENKFV6 with PID 18168 (L:\data\idea-work\maintenance\target\classes started by lq in L:\data\idea-work\maintenance)
-2020-10-13 22:53:31.696 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
-2020-10-13 22:53:31.729 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-10-13 22:53:31.729 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-10-13 22:53:32.238 - WARN  [  restartedMain] o.m.l.Logger                   : No MyBatis mapper was found in '[com.lq.maintenance]' package. Please check your configuration.
-2020-10-13 22:53:32.266 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2020-10-13 22:53:32.269 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
-2020-10-13 22:53:32.294 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 repository interfaces.
-2020-10-13 22:53:32.560 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c4e7b581] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-10-13 22:53:32.856 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8001 (http)
-2020-10-13 22:53:32.867 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8001"]
-2020-10-13 22:53:32.874 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
-2020-10-13 22:53:32.875 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.26]
-2020-10-13 22:53:32.970 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
-2020-10-13 22:53:32.970 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1241 ms
-2020-10-13 22:53:33.090 - INFO  [  restartedMain] a.DruidDataSourceAutoConfigure : Init DruidDataSource
-2020-10-13 22:53:33.311 - INFO  [  restartedMain] c.a.d.p.DruidDataSource        : {dataSource-1} inited
-2020-10-13 22:53:33.731 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
-2020-10-13 22:53:33.810 - WARN  [  restartedMain] tTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2020-10-13 22:53:33.838 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
-2020-10-13 22:53:33.838 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
-2020-10-13 22:53:33.839 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
-2020-10-13 22:53:33.839 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear EntityHelper entityTableMap cache.
-2020-10-13 22:53:34.116 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'taskScheduler'
-2020-10-13 22:53:34.150 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
-2020-10-13 22:53:34.182 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8001"]
-2020-10-13 22:53:34.206 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 8001 (http) with context path ''
-2020-10-13 22:53:34.209 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started MaintenanceApplication in 2.792 seconds (JVM running for 4.181)
-2020-10-13 22:53:38.384 - INFO  [nio-8001-exec-1] o.a.j.l.DirectJDKLog           : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-10-13 22:53:38.384 - INFO  [nio-8001-exec-1] o.s.w.s.FrameworkServlet       : Initializing Servlet 'dispatcherServlet'
-2020-10-13 22:53:38.390 - INFO  [nio-8001-exec-1] o.s.w.s.FrameworkServlet       : Completed initialization in 6 ms
+Using generated security password: eb42aa07-b741-4cb9-8059-d90d70a340aa
+
+2020-10-15 20:14:47.698 - INFO  [  restartedMain] s.w.DefaultSecurityFilterChain : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@71aa28e, org.springframework.security.web.context.SecurityContextPersistenceFilter@3472898b, org.springframework.security.web.header.HeaderWriterFilter@40541e0d, org.springframework.security.web.csrf.CsrfFilter@22ed3fc9, org.springframework.security.web.authentication.logout.LogoutFilter@272a478, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5bc03977, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1b805c87, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@115e5915, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7f038000, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@37237cf5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5378ea50, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@28c62ad3, org.springframework.security.web.session.SessionManagementFilter@32e01c7e, org.springframework.security.web.access.ExceptionTranslationFilter@13bb3d09, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@265ea753]
+2020-10-15 20:14:47.709 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'taskScheduler'
+2020-10-15 20:14:47.750 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2020-10-15 20:14:47.789 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8001"]
+2020-10-15 20:14:47.830 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 8001 (http) with context path ''
+2020-10-15 20:14:47.834 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started MaintenanceApplication in 4.154 seconds (JVM running for 6.303)
+2020-10-15 20:15:21.132 - INFO  [      Thread-17] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'taskScheduler'
+2020-10-15 20:15:21.152 - INFO  [      Thread-17] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-15 20:15:21.155 - INFO  [      Thread-17] c.a.d.p.DruidDataSource        : {dataSource-1} closed
+2020-10-15 23:19:56.935 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting MaintenanceApplication on DESKTOP-DENKFV6 with PID 21108 (L:\data\idea-work\maintenance\target\classes started by lq in L:\data\idea-work\maintenance)
+2020-10-15 23:19:56.941 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2020-10-15 23:19:56.980 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-10-15 23:19:56.980 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-10-15 23:19:57.531 - WARN  [  restartedMain] o.m.l.Logger                   : No MyBatis mapper was found in '[com.lq.maintenance]' package. Please check your configuration.
+2020-10-15 23:19:57.562 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-15 23:19:57.565 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-10-15 23:19:57.592 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 repository interfaces.
+2020-10-15 23:19:57.895 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e61ac800] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-15 23:19:58.207 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8001 (http)
+2020-10-15 23:19:58.219 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8001"]
+2020-10-15 23:19:58.225 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2020-10-15 23:19:58.226 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.26]
+2020-10-15 23:19:58.326 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2020-10-15 23:19:58.326 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1346 ms
+2020-10-15 23:19:58.457 - INFO  [  restartedMain] a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-10-15 23:19:58.687 - INFO  [  restartedMain] c.a.d.p.DruidDataSource        : {dataSource-1} inited
+2020-10-15 23:19:59.131 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-15 23:19:59.218 - WARN  [  restartedMain] tTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-10-15 23:19:59.247 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-10-15 23:19:59.247 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-10-15 23:19:59.248 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-10-15 23:19:59.248 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear EntityHelper entityTableMap cache.
+2020-10-15 23:19:59.604 - INFO  [  restartedMain] etailsServiceAutoConfiguration : 
+
+Using generated security password: 7a9a12c6-14a9-4ef1-bec8-2dc5ad3d0fb3
+
+2020-10-15 23:19:59.689 - INFO  [  restartedMain] s.w.DefaultSecurityFilterChain : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3302a341, org.springframework.security.web.context.SecurityContextPersistenceFilter@49921d2, org.springframework.security.web.header.HeaderWriterFilter@13d0a955, org.springframework.security.web.csrf.CsrfFilter@2a7b7d45, org.springframework.security.web.authentication.logout.LogoutFilter@58586354, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@40185a46, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@495097, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@3ff04cad, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5c926f0d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4e4e7055, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2a047be4, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1eea8b12, org.springframework.security.web.session.SessionManagementFilter@47212257, org.springframework.security.web.access.ExceptionTranslationFilter@7af936ab, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2a8b484b]
+2020-10-15 23:19:59.699 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'taskScheduler'
+2020-10-15 23:19:59.751 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2020-10-15 23:19:59.786 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8001"]
+2020-10-15 23:19:59.809 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 8001 (http) with context path ''
+2020-10-15 23:19:59.812 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started MaintenanceApplication in 3.183 seconds (JVM running for 4.663)
+2020-10-15 23:20:10.538 - INFO  [nio-8001-exec-1] o.a.j.l.DirectJDKLog           : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-15 23:20:10.539 - INFO  [nio-8001-exec-1] o.s.w.s.FrameworkServlet       : Initializing Servlet 'dispatcherServlet'
+2020-10-15 23:20:10.544 - INFO  [nio-8001-exec-1] o.s.w.s.FrameworkServlet       : Completed initialization in 5 ms
+2020-10-15 23:21:30.654 - INFO  [      Thread-16] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'taskScheduler'
+2020-10-15 23:21:30.666 - INFO  [      Thread-16] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-15 23:21:30.671 - INFO  [      Thread-16] c.a.d.p.DruidDataSource        : {dataSource-1} closed
+2020-10-15 23:21:34.840 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting MaintenanceApplication on DESKTOP-DENKFV6 with PID 20716 (L:\data\idea-work\maintenance\target\classes started by lq in L:\data\idea-work\maintenance)
+2020-10-15 23:21:34.846 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2020-10-15 23:21:34.895 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-10-15 23:21:34.896 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-10-15 23:21:35.481 - WARN  [  restartedMain] o.m.l.Logger                   : No MyBatis mapper was found in '[com.lq.maintenance]' package. Please check your configuration.
+2020-10-15 23:21:35.512 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-15 23:21:35.514 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-10-15 23:21:35.542 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 0 repository interfaces.
+2020-10-15 23:21:35.854 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5b26f76d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-15 23:21:36.173 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8001 (http)
+2020-10-15 23:21:36.184 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8001"]
+2020-10-15 23:21:36.190 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2020-10-15 23:21:36.191 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.26]
+2020-10-15 23:21:36.294 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2020-10-15 23:21:36.295 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1398 ms
+2020-10-15 23:21:36.440 - INFO  [  restartedMain] a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-10-15 23:21:36.676 - INFO  [  restartedMain] c.a.d.p.DruidDataSource        : {dataSource-1} inited
+2020-10-15 23:21:37.126 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-15 23:21:37.213 - WARN  [  restartedMain] tTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-10-15 23:21:37.242 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-10-15 23:21:37.242 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-10-15 23:21:37.243 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-10-15 23:21:37.243 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear EntityHelper entityTableMap cache.
+2020-10-15 23:21:37.621 - INFO  [  restartedMain] etailsServiceAutoConfiguration : 
+
+Using generated security password: 9ee02342-ef73-499e-a98e-9a81613dd378
+
+2020-10-15 23:21:37.714 - INFO  [  restartedMain] s.w.DefaultSecurityFilterChain : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6e4a8bac, org.springframework.security.web.context.SecurityContextPersistenceFilter@1f9cf41f, org.springframework.security.web.header.HeaderWriterFilter@13f9e22d, org.springframework.security.web.csrf.CsrfFilter@91adce0, org.springframework.security.web.authentication.logout.LogoutFilter@4fa5df7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@2e9ddff7, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@1721239d, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4a41ea16, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@75c752e7, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@25594ba5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@43bed5f7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2833e38f, org.springframework.security.web.session.SessionManagementFilter@591c7eef, org.springframework.security.web.access.ExceptionTranslationFilter@6b92b286, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2afd358c]
+2020-10-15 23:21:37.727 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'taskScheduler'
+2020-10-15 23:21:37.776 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2020-10-15 23:21:37.814 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8001"]
+2020-10-15 23:21:37.854 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 8001 (http) with context path ''
+2020-10-15 23:21:37.857 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started MaintenanceApplication in 3.821 seconds (JVM running for 5.34)
+2020-10-15 23:23:01.783 - INFO  [      Thread-16] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'taskScheduler'
+2020-10-15 23:23:01.799 - INFO  [      Thread-16] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-15 23:23:01.805 - INFO  [      Thread-16] c.a.d.p.DruidDataSource        : {dataSource-1} closed
+2020-10-15 23:23:09.358 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting MaintenanceApplication on DESKTOP-DENKFV6 with PID 16760 (L:\data\idea-work\maintenance\target\classes started by lq in L:\data\idea-work\maintenance)
+2020-10-15 23:23:09.377 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2020-10-15 23:23:09.477 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-10-15 23:23:09.478 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-10-15 23:23:10.166 - WARN  [  restartedMain] o.m.l.Logger                   : No MyBatis mapper was found in '[com.lq.maintenance]' package. Please check your configuration.
+2020-10-15 23:23:10.203 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-15 23:23:10.206 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-10-15 23:23:10.235 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 0 repository interfaces.
+2020-10-15 23:23:10.524 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$65534fcb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-15 23:23:10.847 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8001 (http)
+2020-10-15 23:23:10.859 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8001"]
+2020-10-15 23:23:10.866 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2020-10-15 23:23:10.868 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.26]
+2020-10-15 23:23:10.969 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2020-10-15 23:23:10.969 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1491 ms
+2020-10-15 23:23:11.099 - INFO  [  restartedMain] a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-10-15 23:23:11.465 - INFO  [  restartedMain] c.a.d.p.DruidDataSource        : {dataSource-1} inited
+2020-10-15 23:23:11.947 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-15 23:23:12.037 - WARN  [  restartedMain] tTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-10-15 23:23:12.066 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-10-15 23:23:12.067 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-10-15 23:23:12.068 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-10-15 23:23:12.068 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear EntityHelper entityTableMap cache.
+2020-10-15 23:23:12.369 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'taskScheduler'
+2020-10-15 23:23:12.417 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2020-10-15 23:23:12.451 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8001"]
+2020-10-15 23:23:12.590 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 8001 (http) with context path ''
+2020-10-15 23:23:12.593 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started MaintenanceApplication in 4.083 seconds (JVM running for 5.692)
+2020-10-15 23:23:22.589 - INFO  [nio-8001-exec-1] o.a.j.l.DirectJDKLog           : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-15 23:23:22.589 - INFO  [nio-8001-exec-1] o.s.w.s.FrameworkServlet       : Initializing Servlet 'dispatcherServlet'
+2020-10-15 23:23:22.597 - INFO  [nio-8001-exec-1] o.s.w.s.FrameworkServlet       : Completed initialization in 8 ms
+2020-10-15 23:24:21.207 - INFO  [      Thread-11] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'taskScheduler'
+2020-10-15 23:24:21.220 - INFO  [      Thread-11] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-15 23:24:21.224 - INFO  [      Thread-11] c.a.d.p.DruidDataSource        : {dataSource-1} closed
+2020-10-15 23:24:27.629 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting MaintenanceApplication on DESKTOP-DENKFV6 with PID 20680 (L:\data\idea-work\maintenance\target\classes started by lq in L:\data\idea-work\maintenance)
+2020-10-15 23:24:27.636 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2020-10-15 23:24:27.687 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-10-15 23:24:27.688 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-10-15 23:24:28.293 - WARN  [  restartedMain] o.m.l.Logger                   : No MyBatis mapper was found in '[com.lq.maintenance]' package. Please check your configuration.
+2020-10-15 23:24:28.325 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-15 23:24:28.328 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-10-15 23:24:28.355 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 0 repository interfaces.
+2020-10-15 23:24:28.635 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$44073a1f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-15 23:24:28.954 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8001 (http)
+2020-10-15 23:24:28.966 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8001"]
+2020-10-15 23:24:28.974 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2020-10-15 23:24:28.975 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.26]
+2020-10-15 23:24:29.080 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2020-10-15 23:24:29.080 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1392 ms
+2020-10-15 23:24:29.212 - INFO  [  restartedMain] a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-10-15 23:24:29.489 - INFO  [  restartedMain] c.a.d.p.DruidDataSource        : {dataSource-1} inited
+2020-10-15 23:24:29.960 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-15 23:24:30.057 - WARN  [  restartedMain] tTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-10-15 23:24:30.089 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-10-15 23:24:30.089 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-10-15 23:24:30.090 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-10-15 23:24:30.090 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear EntityHelper entityTableMap cache.
+2020-10-15 23:24:30.425 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'taskScheduler'
+2020-10-15 23:24:30.465 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2020-10-15 23:24:30.499 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8001"]
+2020-10-15 23:24:30.544 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 8001 (http) with context path ''
+2020-10-15 23:24:30.546 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started MaintenanceApplication in 3.473 seconds (JVM running for 5.038)
+2020-10-15 23:24:32.721 - INFO  [nio-8001-exec-1] o.a.j.l.DirectJDKLog           : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-15 23:24:32.721 - INFO  [nio-8001-exec-1] o.s.w.s.FrameworkServlet       : Initializing Servlet 'dispatcherServlet'
+2020-10-15 23:24:32.726 - INFO  [nio-8001-exec-1] o.s.w.s.FrameworkServlet       : Completed initialization in 5 ms
+2020-10-15 23:26:09.916 - INFO  [      Thread-14] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'taskScheduler'
+2020-10-15 23:26:09.930 - INFO  [      Thread-14] c.ExecutorConfigurationSupport : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-10-15 23:26:09.933 - INFO  [      Thread-14] c.a.d.p.DruidDataSource        : {dataSource-1} closed
+2020-10-15 23:26:13.366 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Starting MaintenanceApplication on DESKTOP-DENKFV6 with PID 21060 (L:\data\idea-work\maintenance\target\classes started by lq in L:\data\idea-work\maintenance)
+2020-10-15 23:26:13.372 - INFO  [  restartedMain] o.s.b.SpringApplication        : No active profile set, falling back to default profiles: default
+2020-10-15 23:26:13.407 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-10-15 23:26:13.408 - INFO  [  restartedMain] o.s.b.l.DeferredLog            : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-10-15 23:26:13.943 - WARN  [  restartedMain] o.m.l.Logger                   : No MyBatis mapper was found in '[com.lq.maintenance]' package. Please check your configuration.
+2020-10-15 23:26:13.974 - INFO  [  restartedMain] epositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2020-10-15 23:26:13.977 - INFO  [  restartedMain] epositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2020-10-15 23:26:14.002 - INFO  [  restartedMain] epositoryConfigurationDelegate : Finished Spring Data repository scanning in 16ms. Found 0 repository interfaces.
+2020-10-15 23:26:14.284 - INFO  [  restartedMain] egate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c64d1512] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-10-15 23:26:14.595 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat initialized with port(s): 8001 (http)
+2020-10-15 23:26:14.609 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing ProtocolHandler ["http-nio-8001"]
+2020-10-15 23:26:14.615 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting service [Tomcat]
+2020-10-15 23:26:14.616 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting Servlet engine: [Apache Tomcat/9.0.26]
+2020-10-15 23:26:14.712 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Initializing Spring embedded WebApplicationContext
+2020-10-15 23:26:14.712 - INFO  [  restartedMain] letWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1304 ms
+2020-10-15 23:26:14.848 - INFO  [  restartedMain] a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2020-10-15 23:26:15.079 - INFO  [  restartedMain] c.a.d.p.DruidDataSource        : {dataSource-1} inited
+2020-10-15 23:26:15.534 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'applicationTaskExecutor'
+2020-10-15 23:26:15.624 - WARN  [  restartedMain] tTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-10-15 23:26:15.654 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2020-10-15 23:26:15.654 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2020-10-15 23:26:15.655 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2020-10-15 23:26:15.655 - INFO  [  restartedMain] t.m.m.a.MapperCacheDisabler    : Clear EntityHelper entityTableMap cache.
+2020-10-15 23:26:15.944 - INFO  [  restartedMain] c.ExecutorConfigurationSupport : Initializing ExecutorService 'taskScheduler'
+2020-10-15 23:26:15.981 - INFO  [  restartedMain] b.d.a.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2020-10-15 23:26:16.014 - INFO  [  restartedMain] o.a.j.l.DirectJDKLog           : Starting ProtocolHandler ["http-nio-8001"]
+2020-10-15 23:26:16.034 - INFO  [  restartedMain] o.s.b.w.e.t.TomcatWebServer    : Tomcat started on port(s): 8001 (http) with context path ''
+2020-10-15 23:26:16.037 - INFO  [  restartedMain] o.s.b.StartupInfoLogger        : Started MaintenanceApplication in 2.952 seconds (JVM running for 4.481)
+2020-10-15 23:26:24.927 - INFO  [nio-8001-exec-1] o.a.j.l.DirectJDKLog           : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-10-15 23:26:24.927 - INFO  [nio-8001-exec-1] o.s.w.s.FrameworkServlet       : Initializing Servlet 'dispatcherServlet'
+2020-10-15 23:26:24.933 - INFO  [nio-8001-exec-1] o.s.w.s.FrameworkServlet       : Completed initialization in 6 ms
