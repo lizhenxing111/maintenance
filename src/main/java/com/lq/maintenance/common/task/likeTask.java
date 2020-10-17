@@ -23,7 +23,7 @@ public class likeTask {
     private RemoteDataService remoteDataService;
     @Autowired
     private HzNoticeMapper hzNoticeMapper;
-    @Scheduled(cron = "0 15 20 * * ?")
+    @Scheduled(cron = "0 30 21 * * ?")
     public void likeTaskMain(){
         remoteDataService.crawRemoteData();
         List<HzNotice> hzNotices = hzNoticeMapper.selectAll();
