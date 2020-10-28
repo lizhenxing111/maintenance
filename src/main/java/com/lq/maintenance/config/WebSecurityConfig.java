@@ -2,7 +2,6 @@ package com.lq.maintenance.config;
 
 import com.lq.maintenance.security.JwtAuthenticationFilter;
 import com.lq.maintenance.security.JwtAuthenticationProvider;
-import com.lq.maintenance.security.JwtLoginFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -37,24 +36,17 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         // 禁用 csrf, 由于使用的是JWT，我们这里不需要csrf
-        http
-                .formLogin().disable()
-                .cors().and()//跨域请求
-                .csrf().disable()
-                .formLogin().disable()
+        http.cors().and().csrf().disable()
                 .authorizeRequests()
+                // 跨域预检请求
+                .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+                // 登录URL
                 .antMatchers("/login").permitAll()
-                .antMatchers("/swagger**/**").permitAll()
-                .antMatchers("/webjars/**").permitAll()
-                .antMatchers("/v2/**").permitAll()
-                .antMatchers(HttpMethod.OPTIONS, "/**").anonymous()
                 // 其他所有请求需要身份认证
                 .anyRequest().authenticated()
                 .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         // 退出登录处理器
         http.logout().logoutSuccessHandler(new HttpStatusReturningLogoutSuccessHandler());
-        // 开启登录认证流程过滤器
-        http.addFilterBefore(new JwtLoginFilter(authenticationManager()), UsernamePasswordAuthenticationFilter.class);
         // 访问控制时登录状态检查过滤器
         http.addFilterBefore(new JwtAuthenticationFilter(authenticationManager()), UsernamePasswordAuthenticationFilter.class);
     }
