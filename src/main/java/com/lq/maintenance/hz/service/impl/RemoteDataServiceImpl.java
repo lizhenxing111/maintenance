@@ -59,7 +59,7 @@ public class RemoteDataServiceImpl implements RemoteDataService {
                     String publishDate = jsonObject.get("publishDate").toString();
                     String pcLink = jsonObject.get("pcLink").toString();
                     SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
-                    HttpGet likeCountGet = new HttpGet("http://yurenhao.sizhengwang.cn/zcms/front/univs/like/allcount?contentId=" + noticeId);
+                    HttpGet likeCountGet = new HttpGet("https://yurenhao.sizhengwang.cn/zcms/front/univs/like/allcount?contentId=" + noticeId);
                     likeCountResponse = httpclient.execute(likeCountGet);
                     HttpEntity likeCountEntity = likeCountResponse.getEntity();
                     String likeCountData = EntityUtils.toString(likeCountEntity);
