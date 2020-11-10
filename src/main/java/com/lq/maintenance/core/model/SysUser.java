@@ -58,9 +58,9 @@ public class SysUser implements Serializable {
     private Date createDate;
 
     /**
-     * 是否锁定(0:正常 1:锁定)
+     * 是否锁定(1:正常 0:锁定)
      */
-    private Byte userLock;
+    private Boolean userLock;
 
     /**
      * 登陆时间
@@ -133,11 +133,11 @@ public class SysUser implements Serializable {
         this.createDate = createDate;
     }
 
-    public Byte getUserLock() {
+    public Boolean getUserLock() {
         return userLock;
     }
 
-    public void setUserLock(Byte userLock) {
+    public void setUserLock(Boolean userLock) {
         this.userLock = userLock;
     }
 

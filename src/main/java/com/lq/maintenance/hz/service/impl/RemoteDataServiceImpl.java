@@ -114,8 +114,8 @@ public class RemoteDataServiceImpl implements RemoteDataService {
     @Override
     public void randomLike(Integer contentId) {
         CloseableHttpClient httpclient = HttpClients.createDefault();
-        HttpPost httpPost = new HttpPost("http://yurenhao.sizhengwang.cn/zcms/front/univs/like");
-        int random = NumberUtils.getRandom(20, 25);
+        HttpPost httpPost = new HttpPost("https://yurenhao.sizhengwang.cn/zcms/front/univs/like");
+        int random = NumberUtils.getRandom(10, 15);
         for (int i = 0; i < random; i++) {
             try {
                 String shortUuid = generateShortUuid();

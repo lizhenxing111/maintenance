@@ -32,6 +32,7 @@ public class LoginController extends AbstractGlobleController {
         try {
             token = SecurityUtils.login(request, username, password, authenticationManager);
         }catch (Exception e){
+            e.printStackTrace();
             return  HttpResult.error(HttpStatus.SC_CREATED,e.getMessage());
         }
         return HttpResult.ok(token);
