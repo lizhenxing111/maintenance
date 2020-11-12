@@ -2,13 +2,13 @@ package com.lq.maintenance.hz.service.impl;
 
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.lq.maintenance.common.util.NumberUtils;
 import com.lq.maintenance.core.dao.HzLogMapper;
 import com.lq.maintenance.core.dao.HzNoticeMapper;
 import com.lq.maintenance.core.model.HzLog;
 import com.lq.maintenance.core.model.HzNotice;
 import com.lq.maintenance.hz.service.RemoteDataService;
 import org.apache.http.Consts;
+import org.apache.http.Header;
 import org.apache.http.HttpEntity;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.ClientProtocolException;
@@ -20,16 +20,21 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.io.IOException;
+import java.net.URI;
+import java.net.URLEncoder;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
 @Service
 public class RemoteDataServiceImpl implements RemoteDataService {
+    private final Logger logger= LoggerFactory.getLogger(getClass());
     @Autowired
     private HzNoticeMapper hzNoticeMapper;
     @Autowired
@@ -112,11 +117,10 @@ public class RemoteDataServiceImpl implements RemoteDataService {
     }
 
     @Override
-    public void randomLike(Integer contentId) {
+    public void randomLike(Integer contentId,int randomNum) {
         CloseableHttpClient httpclient = HttpClients.createDefault();
         HttpPost httpPost = new HttpPost("https://yurenhao.sizhengwang.cn/zcms/front/univs/like");
-        int random = NumberUtils.getRandom(10, 15);
-        for (int i = 0; i < random; i++) {
+        for (int i = 0; i < randomNum; i++) {
             try {
                 String shortUuid = generateShortUuid();
                 List<NameValuePair> nvps = new ArrayList<NameValuePair>();
@@ -151,6 +155,61 @@ public class RemoteDataServiceImpl implements RemoteDataService {
         } catch (IOException var37) {
             var37.printStackTrace();
         }
+    }
+
+    @Override
+    public void randomHit(Integer noticeId, String title, String link, Integer hitTime) {
+        for (int i = 0; i < hitTime; i++) {
+            CloseableHttpClient httpclient = HttpClients.createDefault();
+            try {
+                HttpGet httpget = new HttpGet();
+                StringBuilder startUrl = new StringBuilder("http://yurenhao.sizhengwang.cn/zcms/front/stat/dealer?");
+                startUrl.append("SiteID=143");
+                startUrl.append("&CatalogInnerCode=002738000002000003000483");
+                startUrl.append("&LeafID="+noticeId);
+                startUrl.append("&Type=Article");
+                startUrl.append("&Title="+ URLEncoder.encode(title, "utf-8"));
+                startUrl.append("&URL="+link);
+                startUrl.append("&Host=yurenhao.sizhengwang.cn");
+                httpget.setURI(URI.create(startUrl.toString()));
+                CloseableHttpResponse response = httpclient.execute(httpget);
+                Header[] allHeaders = response.getHeaders("Set-Cookie");
+                StringBuilder stringBuilderCookie = new StringBuilder();
+                for (Header allHeader : allHeaders) {
+                    if (allHeader.getValue().contains("SERVERID")) {
+                        String s = allHeader.getValue().split(";")[0];
+                        String[] split = s.split("\\|");
+                        Long end = Long.valueOf(split[1]) + 60L;
+                        String cookie = split[0] + "|" + end.toString() + "|" + split[2];
+                        stringBuilderCookie.append(cookie + ";");
+                    } else {
+                        String s = allHeader.getValue().split(";")[0];
+                        stringBuilderCookie.append(s + ";");
+                    }
+                }
+                HttpGet httpget1 = new HttpGet("https://yurenhao.sizhengwang.cn/zcms/front/recommends/dealer?Event=KeepAlive&SiteID=143");
+                logger.info("拼接的刷新浏览量的cookie:" + stringBuilderCookie);
+                httpget1.setHeader("cookie", stringBuilderCookie.toString());
+                CloseableHttpResponse response1 = httpclient.execute(httpget1);
+                response.close();
+                response1.close();
+                System.out.println("返回值:" + response1.getStatusLine());
+            } catch (ClientProtocolException var39) {
+                var39.printStackTrace();
+            } catch (org.apache.http.ParseException var40) {
+                var40.printStackTrace();
+            } catch (IOException var41) {
+                var41.printStackTrace();
+            } finally {
+                try {
+                    httpclient.close();
+                } catch (IOException var37) {
+                    var37.printStackTrace();
+                }
+
+            }
+        }
+        logger.info("浏览结束");
     }
 
     public static String[] chars = new String[]{"a", "b", "c", "d", "e", "f",

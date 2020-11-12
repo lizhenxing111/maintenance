@@ -105,6 +105,7 @@ Configuration:
         - ref: CONSOLE
         - ref: ROLLING_FILE
         - ref: EXCEPTION_ROLLING_FILE
+        - ref: BUSSINESS_ROLLING_FILE
     Logger:
       - name: platform
         level: info
