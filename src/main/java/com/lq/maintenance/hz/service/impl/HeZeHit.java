@@ -20,15 +20,19 @@ public class HeZeHit {
         try {
             for (int i = 0; i < 30; i++) {
                 String UniqueID = UUID.randomUUID().toString().replaceAll("-", "");
-                HttpGet httpget = new HttpGet("http://yurenhao.sizhengwang.cn/zcms/front/stat/dealer?SiteID=143&CatalogInnerCode=002738000002000003000001" );
-                httpget.setHeader("UniqueID",UniqueID);
-                httpget.setHeader("LeafID","606276");
+                HttpGet httpget = new HttpGet("http://yurenhao.sizhengwang.cn/zcms/front/stat/dealer");
+                httpget.setHeader("SiteID","143");
+                httpget.setHeader("CatalogInnerCode","002738000002000003000483");
+                httpget.setHeader("LeafID","637466");
                 httpget.setHeader("Type","Article");
-                httpget.setHeader("vq","2");
+                httpget.setHeader("Title","“与信仰对话”教授、博士讲坛（六）");
+                httpget.setHeader("URL","https://yurenhao.sizhengwang.cn/a/hzxysxytjxyxsdzb/201112/637466.shtml");
+                httpget.setHeader("Host","yurenhao.sizhengwang.cn");
+
                 CloseableHttpResponse response = httpclient.execute(httpget);
                 Header[] allHeaders1 = response.getAllHeaders();
                 for (Header header : allHeaders1) {
-                    System.out.println(header.getName());
+                    System.out.println(header.getName()+":"+header.getValue());
                 }
                 Header[] allHeaders = response.getHeaders("Set-Cookie");
                 String s = allHeaders[0].getValue().split(";")[0];
