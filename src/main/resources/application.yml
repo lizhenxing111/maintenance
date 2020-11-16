@@ -30,7 +30,7 @@ spring:
       max-open-prepared-statements: 50
       max-pool-prepared-statement-per-connection-size: 20
 
-  #redis
+#redis
 #  redis:
 #    database: 0
 #    host: localhost
@@ -43,6 +43,12 @@ mybatis:
   mapper-locations: /mapping/*.xml
   configuration:
     map-underscore-to-camel-case: true
+# pageHelper
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
 #日志
 logging:
   config: classpath:log4j2.yml

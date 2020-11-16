@@ -1,8 +1,7 @@
 package com.lq.maintenance.hz.service;
 
+import com.github.pagehelper.PageInfo;
 import com.lq.maintenance.core.model.HzNotice;
-
-import java.util.List;
 
 /**
  * @program: maintenance
@@ -15,6 +14,9 @@ public interface NoticeService {
      * @description 获取所有的文章列表
      * @author lzx
      * @date 2020年10月13日 22:41
+     * @return
+     * @param pageNo
+     * @param pageSize
      */
-    public List<HzNotice> queryNoticeAll();
+    public PageInfo<HzNotice> queryNoticeAll(Integer pageNo, Integer pageSize);
 }
