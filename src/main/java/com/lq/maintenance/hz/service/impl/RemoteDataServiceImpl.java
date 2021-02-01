@@ -134,7 +134,6 @@ public class RemoteDataServiceImpl implements RemoteDataService {
                 if (entity != null) {
                     String data = EntityUtils.toString(entity);
                     JSONObject jsonData = JSONObject.parseObject(data);
-                    System.out.println(jsonData);
                     HzLog hzLog = new HzLog();
                     hzLog.setClientId(shortUuid);
                     hzLog.setGenerateDate(new Date());
@@ -159,6 +158,7 @@ public class RemoteDataServiceImpl implements RemoteDataService {
 
     @Override
     public void randomHit(Integer noticeId, String title, String link, Integer hitTime) {
+        System.out.println("["+noticeId+":"+hitTime+"]");
         for (int i = 0; i < hitTime; i++) {
             CloseableHttpClient httpclient = HttpClients.createDefault();
             try {
@@ -173,7 +173,11 @@ public class RemoteDataServiceImpl implements RemoteDataService {
                 startUrl.append("&Host=yurenhao.sizhengwang.cn");
                 httpget.setURI(URI.create(startUrl.toString()));
                 CloseableHttpResponse response = httpclient.execute(httpget);
+
+
+                HttpGet httpget1 = new HttpGet("https://yurenhao.sizhengwang.cn/zcms/front/recommends/dealer?Event=KeepAlive&SiteID=143");
                 Header[] allHeaders = response.getHeaders("Set-Cookie");
+
                 StringBuilder stringBuilderCookie = new StringBuilder();
                 for (Header allHeader : allHeaders) {
                     if (allHeader.getValue().contains("SERVERID")) {
@@ -187,13 +191,10 @@ public class RemoteDataServiceImpl implements RemoteDataService {
                         stringBuilderCookie.append(s + ";");
                     }
                 }
-                HttpGet httpget1 = new HttpGet("https://yurenhao.sizhengwang.cn/zcms/front/recommends/dealer?Event=KeepAlive&SiteID=143");
-                logger.info("拼接的刷新浏览量的cookie:" + stringBuilderCookie);
                 httpget1.setHeader("cookie", stringBuilderCookie.toString());
                 CloseableHttpResponse response1 = httpclient.execute(httpget1);
                 response.close();
                 response1.close();
-                System.out.println("返回值:" + response1.getStatusLine());
             } catch (ClientProtocolException var39) {
                 var39.printStackTrace();
             } catch (org.apache.http.ParseException var40) {
