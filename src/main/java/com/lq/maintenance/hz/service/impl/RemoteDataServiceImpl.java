@@ -46,7 +46,7 @@ public class RemoteDataServiceImpl implements RemoteDataService {
     public void crawRemoteData() {
         CloseableHttpClient httpclient = HttpClients.createDefault();
         try {
-            HttpGet httpget = new HttpGet("http://yurenhao.sizhengwang.cn/zcms/front/information/studio?pageIndex=0&pageSize=10000&tag=&siteID=143&studioID=14972&v=" + (new Date()).getTime());
+            HttpGet httpget = new HttpGet("http://yurenhao.sizhengwang.cn/zcms/front/information/studio?pageIndex=0&pageSize=10000&tag=&siteID=143&studioID=14332&v=" + (new Date()).getTime());
             CloseableHttpResponse response = httpclient.execute(httpget);
             HttpEntity entity = response.getEntity();
             if (entity != null) {

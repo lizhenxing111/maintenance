@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ImportStdInfoMapper">
+  <resultMap id="BaseResultMap" type="com.ImportStdInfo">
+    <result column="PROJECT_ID" jdbcType="INTEGER" property="projectId" />
+    <result column="PLAN_CODE" jdbcType="VARCHAR" property="planCode" />
+    <result column="STD_CODE" jdbcType="VARCHAR" property="stdCode" />
+    <result column="C_NAME" jdbcType="VARCHAR" property="cName" />
+    <result column="E_NAME" jdbcType="VARCHAR" property="eName" />
+    <result column="STD_LEVEL" jdbcType="VARCHAR" property="stdLevel" />
+    <result column="REVISE_STD_CODES" jdbcType="VARCHAR" property="reviseStdCodes" />
+    <result column="PUB_PROJECT_FORM_ID" jdbcType="VARCHAR" property="pubProjectFormId" />
+    <result column="PUB_STD_NUTURE_ID" jdbcType="INTEGER" property="pubStdNutureId" />
+    <result column="PUB_STD_TYPE_ID" jdbcType="INTEGER" property="pubStdTypeId" />
+    <result column="ADOPT_ISTD_TYPE_ID" jdbcType="INTEGER" property="adoptIstdTypeId" />
+    <result column="ADOPT_ISTD_NO" jdbcType="VARCHAR" property="adoptIstdNo" />
+    <result column="ISTD_CONSISTENCY_ID" jdbcType="INTEGER" property="istdConsistencyId" />
+    <result column="ADOPT_ISTD_NAME" jdbcType="VARCHAR" property="adoptIstdName" />
+    <result column="DRAFT_UNIT" jdbcType="VARCHAR" property="draftUnit" />
+    <result column="DRAFTER_LIST" jdbcType="VARCHAR" property="drafterList" />
+    <result column="ISSUE_TIME" jdbcType="DATE" property="issueTime" />
+    <result column="ACT_TIME" jdbcType="DATE" property="actTime" />
+    <result column="CCS" jdbcType="VARCHAR" property="ccs" />
+    <result column="ICS" jdbcType="VARCHAR" property="ics" />
+    <result column="BOUND" jdbcType="VARCHAR" property="bound" />
+    <result column="industry_field_id" jdbcType="INTEGER" property="industryFieldId" />
+    <result column="TM_ID" jdbcType="INTEGER" property="tmId" />
+    <result column="TM_REMARK" jdbcType="VARCHAR" property="tmRemark" />
+    <result column="TA_ID" jdbcType="INTEGER" property="taId" />
+    <result column="TA_REMARK" jdbcType="VARCHAR" property="taRemark" />
+    <result column="UTA_ID" jdbcType="INTEGER" property="utaId" />
+    <result column="UTA_REMARK" jdbcType="VARCHAR" property="utaRemark" />
+    <result column="MANAGE_ID" jdbcType="INTEGER" property="manageId" />
+    <result column="MANAGE_REMARK" jdbcType="VARCHAR" property="manageRemark" />
+    <result column="STATE" jdbcType="INTEGER" property="state" />
+    <result column="STD_FLAG" jdbcType="INTEGER" property="stdFlag" />
+    <result column="REPE_FLAG" jdbcType="VARCHAR" property="repeFlag" />
+    <result column="LAST_REEXAM_DATE" jdbcType="DATE" property="lastReexamDate" />
+    <result column="REEXAM_RESULT" jdbcType="VARCHAR" property="reexamResult" />
+    <result column="REMARK" jdbcType="VARCHAR" property="remark" />
+  </resultMap>
+  <insert id="insert" parameterType="com.ImportStdInfo">
+    insert into import_std_info (PROJECT_ID, PLAN_CODE, STD_CODE, 
+      C_NAME, E_NAME, STD_LEVEL, 
+      REVISE_STD_CODES, PUB_PROJECT_FORM_ID, PUB_STD_NUTURE_ID, 
+      PUB_STD_TYPE_ID, ADOPT_ISTD_TYPE_ID, ADOPT_ISTD_NO, 
+      ISTD_CONSISTENCY_ID, ADOPT_ISTD_NAME, DRAFT_UNIT, 
+      DRAFTER_LIST, ISSUE_TIME, ACT_TIME, 
+      CCS, ICS, BOUND, industry_field_id, 
+      TM_ID, TM_REMARK, TA_ID, 
+      TA_REMARK, UTA_ID, UTA_REMARK, 
+      MANAGE_ID, MANAGE_REMARK, `STATE`, 
+      STD_FLAG, REPE_FLAG, LAST_REEXAM_DATE, 
+      REEXAM_RESULT, REMARK)
+    values (#{projectId,jdbcType=INTEGER}, #{planCode,jdbcType=VARCHAR}, #{stdCode,jdbcType=VARCHAR}, 
+      #{cName,jdbcType=VARCHAR}, #{eName,jdbcType=VARCHAR}, #{stdLevel,jdbcType=VARCHAR}, 
+      #{reviseStdCodes,jdbcType=VARCHAR}, #{pubProjectFormId,jdbcType=VARCHAR}, #{pubStdNutureId,jdbcType=INTEGER}, 
+      #{pubStdTypeId,jdbcType=INTEGER}, #{adoptIstdTypeId,jdbcType=INTEGER}, #{adoptIstdNo,jdbcType=VARCHAR}, 
+      #{istdConsistencyId,jdbcType=INTEGER}, #{adoptIstdName,jdbcType=VARCHAR}, #{draftUnit,jdbcType=VARCHAR}, 
+      #{drafterList,jdbcType=VARCHAR}, #{issueTime,jdbcType=DATE}, #{actTime,jdbcType=DATE}, 
+      #{ccs,jdbcType=VARCHAR}, #{ics,jdbcType=VARCHAR}, #{bound,jdbcType=VARCHAR}, #{industryFieldId,jdbcType=INTEGER}, 
+      #{tmId,jdbcType=INTEGER}, #{tmRemark,jdbcType=VARCHAR}, #{taId,jdbcType=INTEGER}, 
+      #{taRemark,jdbcType=VARCHAR}, #{utaId,jdbcType=INTEGER}, #{utaRemark,jdbcType=VARCHAR}, 
+      #{manageId,jdbcType=INTEGER}, #{manageRemark,jdbcType=VARCHAR}, #{state,jdbcType=INTEGER}, 
+      #{stdFlag,jdbcType=INTEGER}, #{repeFlag,jdbcType=VARCHAR}, #{lastReexamDate,jdbcType=DATE}, 
+      #{reexamResult,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.ImportStdInfo">
+    insert into import_std_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="projectId != null">
+        PROJECT_ID,
+      </if>
+      <if test="planCode != null">
+        PLAN_CODE,
+      </if>
+      <if test="stdCode != null">
+        STD_CODE,
+      </if>
+      <if test="cName != null">
+        C_NAME,
+      </if>
+      <if test="eName != null">
+        E_NAME,
+      </if>
+      <if test="stdLevel != null">
+        STD_LEVEL,
+      </if>
+      <if test="reviseStdCodes != null">
+        REVISE_STD_CODES,
+      </if>
+      <if test="pubProjectFormId != null">
+        PUB_PROJECT_FORM_ID,
+      </if>
+      <if test="pubStdNutureId != null">
+        PUB_STD_NUTURE_ID,
+      </if>
+      <if test="pubStdTypeId != null">
+        PUB_STD_TYPE_ID,
+      </if>
+      <if test="adoptIstdTypeId != null">
+        ADOPT_ISTD_TYPE_ID,
+      </if>
+      <if test="adoptIstdNo != null">
+        ADOPT_ISTD_NO,
+      </if>
+      <if test="istdConsistencyId != null">
+        ISTD_CONSISTENCY_ID,
+      </if>
+      <if test="adoptIstdName != null">
+        ADOPT_ISTD_NAME,
+      </if>
+      <if test="draftUnit != null">
+        DRAFT_UNIT,
+      </if>
+      <if test="drafterList != null">
+        DRAFTER_LIST,
+      </if>
+      <if test="issueTime != null">
+        ISSUE_TIME,
+      </if>
+      <if test="actTime != null">
+        ACT_TIME,
+      </if>
+      <if test="ccs != null">
+        CCS,
+      </if>
+      <if test="ics != null">
+        ICS,
+      </if>
+      <if test="bound != null">
+        BOUND,
+      </if>
+      <if test="industryFieldId != null">
+        industry_field_id,
+      </if>
+      <if test="tmId != null">
+        TM_ID,
+      </if>
+      <if test="tmRemark != null">
+        TM_REMARK,
+      </if>
+      <if test="taId != null">
+        TA_ID,
+      </if>
+      <if test="taRemark != null">
+        TA_REMARK,
+      </if>
+      <if test="utaId != null">
+        UTA_ID,
+      </if>
+      <if test="utaRemark != null">
+        UTA_REMARK,
+      </if>
+      <if test="manageId != null">
+        MANAGE_ID,
+      </if>
+      <if test="manageRemark != null">
+        MANAGE_REMARK,
+      </if>
+      <if test="state != null">
+        `STATE`,
+      </if>
+      <if test="stdFlag != null">
+        STD_FLAG,
+      </if>
+      <if test="repeFlag != null">
+        REPE_FLAG,
+      </if>
+      <if test="lastReexamDate != null">
+        LAST_REEXAM_DATE,
+      </if>
+      <if test="reexamResult != null">
+        REEXAM_RESULT,
+      </if>
+      <if test="remark != null">
+        REMARK,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="projectId != null">
+        #{projectId,jdbcType=INTEGER},
+      </if>
+      <if test="planCode != null">
+        #{planCode,jdbcType=VARCHAR},
+      </if>
+      <if test="stdCode != null">
+        #{stdCode,jdbcType=VARCHAR},
+      </if>
+      <if test="cName != null">
+        #{cName,jdbcType=VARCHAR},
+      </if>
+      <if test="eName != null">
+        #{eName,jdbcType=VARCHAR},
+      </if>
+      <if test="stdLevel != null">
+        #{stdLevel,jdbcType=VARCHAR},
+      </if>
+      <if test="reviseStdCodes != null">
+        #{reviseStdCodes,jdbcType=VARCHAR},
+      </if>
+      <if test="pubProjectFormId != null">
+        #{pubProjectFormId,jdbcType=VARCHAR},
+      </if>
+      <if test="pubStdNutureId != null">
+        #{pubStdNutureId,jdbcType=INTEGER},
+      </if>
+      <if test="pubStdTypeId != null">
+        #{pubStdTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="adoptIstdTypeId != null">
+        #{adoptIstdTypeId,jdbcType=INTEGER},
+      </if>
+      <if test="adoptIstdNo != null">
+        #{adoptIstdNo,jdbcType=VARCHAR},
+      </if>
+      <if test="istdConsistencyId != null">
+        #{istdConsistencyId,jdbcType=INTEGER},
+      </if>
+      <if test="adoptIstdName != null">
+        #{adoptIstdName,jdbcType=VARCHAR},
+      </if>
+      <if test="draftUnit != null">
+        #{draftUnit,jdbcType=VARCHAR},
+      </if>
+      <if test="drafterList != null">
+        #{drafterList,jdbcType=VARCHAR},
+      </if>
+      <if test="issueTime != null">
+        #{issueTime,jdbcType=DATE},
+      </if>
+      <if test="actTime != null">
+        #{actTime,jdbcType=DATE},
+      </if>
+      <if test="ccs != null">
+        #{ccs,jdbcType=VARCHAR},
+      </if>
+      <if test="ics != null">
+        #{ics,jdbcType=VARCHAR},
+      </if>
+      <if test="bound != null">
+        #{bound,jdbcType=VARCHAR},
+      </if>
+      <if test="industryFieldId != null">
+        #{industryFieldId,jdbcType=INTEGER},
+      </if>
+      <if test="tmId != null">
+        #{tmId,jdbcType=INTEGER},
+      </if>
+      <if test="tmRemark != null">
+        #{tmRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="taId != null">
+        #{taId,jdbcType=INTEGER},
+      </if>
+      <if test="taRemark != null">
+        #{taRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="utaId != null">
+        #{utaId,jdbcType=INTEGER},
+      </if>
+      <if test="utaRemark != null">
+        #{utaRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="manageId != null">
+        #{manageId,jdbcType=INTEGER},
+      </if>
+      <if test="manageRemark != null">
+        #{manageRemark,jdbcType=VARCHAR},
+      </if>
+      <if test="state != null">
+        #{state,jdbcType=INTEGER},
+      </if>
+      <if test="stdFlag != null">
+        #{stdFlag,jdbcType=INTEGER},
+      </if>
+      <if test="repeFlag != null">
+        #{repeFlag,jdbcType=VARCHAR},
+      </if>
+      <if test="lastReexamDate != null">
+        #{lastReexamDate,jdbcType=DATE},
+      </if>
+      <if test="reexamResult != null">
+        #{reexamResult,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>

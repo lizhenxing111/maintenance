@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @program: maintenance
+ *
  * @description: 发布文章管理
  * @author: lzx
  * @create: 2020-10-13 22:38
@@ -34,16 +35,21 @@ public class NoticeController {
     @RequestMapping(value = "a")
     public void start(){
         PageInfo<HzNotice> hzNotices = noticeService.queryNoticeAll(1, 1000);
-        int[] ints = NumberUtils.randomCommon(0, hzNotices.getList().size() - 1, 10);
-        for (int i = 0; i < ints.length; i++) {
-            int anInt = ints[i];
-            HzNotice hzNotice = hzNotices.getList().get(anInt);
-            //随机产生数字
-            int randomLike = NumberUtils.getRandom(10, 15);
-            int randomHit = NumberUtils.getRandom(randomLike, randomLike*2);
-            logger.info("文章ID:{},浏览量次数:{},点赞次数:{}",hzNotice.getNoticeId(),randomHit,randomLike);
-            remoteDataService.randomLike(hzNotice.getNoticeId(),randomLike);
-            remoteDataService.randomHit(hzNotice.getNoticeId(),hzNotice.getNoticeTitle(),hzNotice.getPcLink(),randomHit);
+        for (HzNotice hzNotice : hzNotices.getList()) {
+            logger.info("文章ID:{},点赞次数:{}",hzNotice.getNoticeId(),hzNotice.getLikeCount());
+            remoteDataService.randomLike(hzNotice.getNoticeId(),hzNotice.getLikeCount());
         }
+        System.out.println(111);
+//        int[] ints = NumberUtils.randomCommon(0, hzNotices.getList().size() - 1, 5);
+//        for (int i = 0; i < ints.length; i++) {
+//            int anInt = ints[i];
+//            HzNotice hzNotice = hzNotices.getList().get(anInt);
+//            //随机产生数字
+//            int randomLike = NumberUtils.getRandom(10, 15);
+//            int randomHit = NumberUtils.getRandom(randomLike, randomLike*2);
+//            logger.info("文章ID:{},浏览量次数:{},点赞次数:{}",hzNotice.getNoticeId(),randomHit,randomLike);
+//            remoteDataService.randomLike(hzNotice.getNoticeId(),randomLike);
+//            remoteDataService.randomHit(hzNotice.getNoticeId(),hzNotice.getNoticeTitle(),hzNotice.getPcLink(),randomHit);
+//        }
     }
 }
