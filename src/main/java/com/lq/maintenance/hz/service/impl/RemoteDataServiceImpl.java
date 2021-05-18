@@ -46,7 +46,7 @@ public class RemoteDataServiceImpl implements RemoteDataService {
     public void crawRemoteData() {
         CloseableHttpClient httpclient = HttpClients.createDefault();
         try {
-            HttpGet httpget = new HttpGet("http://yurenhao.sizhengwang.cn/zcms/front/information/studio?pageIndex=0&pageSize=10000&tag=&siteID=143&studioID=14332&v=" + (new Date()).getTime());
+            HttpGet httpget = new HttpGet("http://yurenhao.sizhengwang.cn/zcms/front/information/studio?pageIndex=0&pageSize=10000&tag=&siteID=143&studioID=14972&v=" + (new Date()).getTime());
             CloseableHttpResponse response = httpclient.execute(httpget);
             HttpEntity entity = response.getEntity();
             if (entity != null) {
@@ -164,10 +164,17 @@ public class RemoteDataServiceImpl implements RemoteDataService {
             try {
                 HttpGet httpget = new HttpGet();
                 StringBuilder startUrl = new StringBuilder("http://yurenhao.sizhengwang.cn/zcms/front/stat/dealer?");
-                startUrl.append("SiteID=143");
+                startUrl.append("&sr=1920x1080");
+                startUrl.append("&cd=24");
+                startUrl.append("&ce=1");
+                startUrl.append("&la=zh-CN");
+                startUrl.append("&cs=UTF-8");
+                startUrl.append("&vq=117");
+                startUrl.append("&SiteID=143");
                 startUrl.append("&CatalogInnerCode=002738000002000003000483");
                 startUrl.append("&LeafID="+noticeId);
                 startUrl.append("&Type=Article");
+                startUrl.append("&Referer=https://yurenhao.sizhengwang.cn/djcgz/yrh/index.shtml?SiteID=143&studioID=14972");
                 startUrl.append("&Title="+ URLEncoder.encode(title, "utf-8"));
                 startUrl.append("&URL="+link);
                 startUrl.append("&Host=yurenhao.sizhengwang.cn");
@@ -177,13 +184,13 @@ public class RemoteDataServiceImpl implements RemoteDataService {
 
                 HttpGet httpget1 = new HttpGet("https://yurenhao.sizhengwang.cn/zcms/front/recommends/dealer?Event=KeepAlive&SiteID=143");
                 Header[] allHeaders = response.getHeaders("Set-Cookie");
-
+//
                 StringBuilder stringBuilderCookie = new StringBuilder();
                 for (Header allHeader : allHeaders) {
                     if (allHeader.getValue().contains("SERVERID")) {
                         String s = allHeader.getValue().split(";")[0];
                         String[] split = s.split("\\|");
-                        Long end = Long.valueOf(split[1]) + 60L;
+                        Long end = Long.valueOf(split[1]) + 160L;
                         String cookie = split[0] + "|" + end.toString() + "|" + split[2];
                         stringBuilderCookie.append(cookie + ";");
                     } else {
@@ -191,6 +198,7 @@ public class RemoteDataServiceImpl implements RemoteDataService {
                         stringBuilderCookie.append(s + ";");
                     }
                 }
+////                System.out.println(stringBuilderCookie.toString());
                 httpget1.setHeader("cookie", stringBuilderCookie.toString());
                 CloseableHttpResponse response1 = httpclient.execute(httpget1);
                 response.close();
